@@ -1,8 +1,8 @@
 {
   "name": "Image Cleanup",
   "group": "Watchtower",
-  "script_path": "docker-image-prune.sh",
-  "working_directory": "/opt/script-server/conf/scripts/",
+  "script_path": "scripts/docker-image-prune.sh",
+  "working_directory": "./conf",
   "description": "Delete all unused Docker images",
   "allowed_users": [
     "*"
