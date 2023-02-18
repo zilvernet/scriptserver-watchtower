@@ -1,8 +1,8 @@
 {
   "name": "Check for Updates",
   "group": "Watchtower",
-  "script_path": "watchtower-check.sh",
-  "working_directory": "/opt/script-server/conf/scripts/",
+  "script_path": "scripts/watchtower-check.sh",
+  "working_directory": "./conf",
   "description": "Check what containers need Updates using Watchtower",
   "allowed_users": [
     "*"
