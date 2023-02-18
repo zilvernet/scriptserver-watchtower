@@ -1,0 +1,24 @@
+{
+  "name": "Force Update",
+  "group": "Watchtower",
+  "script_path": "watchtower-force-update.sh",
+  "working_directory": "/opt/script-server/conf/scripts/",
+  "description": "Select a container to Update Now with Watchtower",
+  "allowed_users": [
+    "*"
+  ],
+  "include": "${Simple Text}.json",
+  "parameters": [
+    {
+      "name": "Updates available",
+//      "param": "--server_file",
+      "type": "server_file",
+      "secure": true,
+      "file_dir": "../scripts/updates",
+      "excluded_files": [
+        "auth*",
+        "/var/**/user*"
+      ]
+    }
+  ]
+}
