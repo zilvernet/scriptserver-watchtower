@@ -1,5 +1,5 @@
 # scriptserver-watchtower
-Is a collection of scripts that uses Script-server web interfase and provide Docker container image updates and other managment features
+Is a collection of scripts that uses Script-server web interfase and provide Docker container image updates and other management features
 
 ### Script-server
 Script-server is a lightweight server that allows you to run scripts with a simple HTTP request. It provides a secure and flexible way to execute scripts, and can be used for a wide variety of tasks, from simple shell scripts to complex automation workflows. ScriptServer is easy to install and configure, and provides a simple yet powerful interface for managing scripts and their associated runners.
