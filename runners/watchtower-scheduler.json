@@ -1,0 +1,10 @@
+{
+  "name": "Watchtower Scheduler",
+  "group": "Watchtower",
+  "script_path": "watchtower-scheduler.sh",
+  "working_directory": "../scripts",
+  "description": "Install or Update Watchtower Scheduler",
+  "allowed_users": [
+    "*"
+  ]
+}
