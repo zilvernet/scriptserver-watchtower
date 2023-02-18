@@ -30,7 +30,7 @@ echo "$matches" | sed -E 's|.*/(.+):.*|\1|' > image_list.txt
 # loop through each image name and write its updates to a file
 while read -r image_name; do
   # get rule for this image from INI file
-  image_rule=$(awk -F= -v image_name="$image_name" '/^\[image-container\]/{f=1; next} /^\[/{f=0} f && $1 == image_name {gsub(/^\s+|\s+$/,"",$2); print $2; exit}' image-container.ini)
+  image_rule=$(awk -F= -v image_name="$image_name" '/^\[image-container\]/{f=1; next} /^\[/{f=0} f && $1 == image_name {gsub(/^\s+|\s+$/,>
 
   # apply rule if it exists, otherwise use the image name as-is
   if [ -n "$image_rule" ]; then
@@ -39,17 +39,10 @@ while read -r image_name; do
       image_namefix="$image_name"
   fi
 
-#  # search for updates for this image and write to a file with the image name
-#  echo "$output" | grep "$image_name" | sed -E 's|^[^/]+/(.+)$|\1|' > "updates/$image_namefix"
-#done < image_list.txt
-
-## print message to confirm files were written
-##echo "Updates for each image have been written to individual files in the ./updates directory."
-#echo "$matches" | sed -E 's|.*/(.+):.*|\1|'
-
-
   # search for updates for this image and write to a file with the image name
-  echo "$output" | grep "$image_name" | sed -E 's|^[^/]+/(.+)$|\1|' > "updates/$image_namefix"
+  if [ -n "$image_namefix" ]; then
+    echo "$output" | grep "$image_name" | sed -E 's|^[^/]+/(.+)$|\1|' > "updates/$image_namefix"
+  fi
 done < <(echo "$matches" | sed -E 's|.*/(.+):.*|\1|')
 
 # print message to confirm files were written
