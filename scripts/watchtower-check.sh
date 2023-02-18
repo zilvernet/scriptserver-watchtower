@@ -30,7 +30,7 @@ echo "$matches" | sed -E 's|.*/(.+):.*|\1|' > image_list.txt
 # loop through each image name and write its updates to a file
 while read -r image_name; do
   # get rule for this image from INI file
-  image_rule=$(awk -F= -v image_name="$image_name" '/^\[image-container\]/{f=1; next} /^\[/{f=0} f && $1 == image_name {gsub(/^\s+|\s+$/,>
+  image_rule=$(awk -F= -v image_name="$image_name" '/^\[image-container\]/{f=1; next} /^\[/{f=0} f && $1 == image_name {gsub(/^\s+|\s+$/,"",$2); print $2; exit}' image-container.ini)
 
   # apply rule if it exists, otherwise use the image name as-is
   if [ -n "$image_rule" ]; then
