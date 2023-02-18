@@ -30,3 +30,4 @@ You can find ScriptServer on GitHub at https://github.com/bugy/script-server/
 
 The scriptserver runners options are located in: `/opt/script-server/conf/runners`. 
 The scripts that the runners use for their different features are located in: `/opt/script-server/conf/scripts`.
+The configuration ini files should be placed in: /opt/script-server/conf
