@@ -1,9 +1,9 @@
 {
   "name": "Scheduler",
-  "group": "Watchtower",
+  "group": "Updater",
   "script_path": "scripts/watchtower-scheduler.sh",
   "working_directory": "./conf",
-  "description": "Install or Update Watchtower Scheduler",
+  "description": "Install or Update the Scheduler",
   "allowed_users": [
     "*"
   ]
