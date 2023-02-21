@@ -1,9 +1,9 @@
 {
   "name": "Force Update",
-  "group": "Watchtower",
+  "group": "Updater",
   "script_path": "scripts/watchtower-force-update.sh",
   "working_directory": "./conf",
-  "description": "Select a container to Update Now with Watchtower",
+  "description": "Select a container to Update Now",
   "allowed_users": [
     "*"
   ],
