@@ -20,11 +20,11 @@ slack_identifier="watchtower-$(hostname)"
 echo "    slack_identifier=$slack_identifier"
 
 # Run the Watchtower Scheduler
-watchtower=watchtower-scheduler
+watchtower=scheduler
 echo -e "\nStopping: "
 docker stop $watchtower
 echo -e "\nRemoving: "
-docker rm watchtower-scheduler
+docker rm $watchtower
 echo -e "\nStarting: \n$watchtower"
 docker pull containrrr/watchtower
 docker run -d \
