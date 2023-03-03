@@ -35,4 +35,4 @@ The scriptserver runners options are located in: `/opt/script-server/conf/runner
 The scripts that the runners use for their different features are located in: `/opt/script-server/conf/scripts`.
 The configuration ini files should be placed in: /opt/script-server/conf
 
-> Note:  is not compatible with the script-server docker install.
+> Note:  it is not compatible with the script-server docker install.
